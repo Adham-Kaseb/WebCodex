@@ -1,0 +1,108 @@
+/* src/components/Dashboard/SalesDistributionCard.css */
+
+.sales-dist-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.sdc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.sdc-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.sdc-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-btn);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-card);
+}
+
+.sdc-metrics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.sdc-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metric-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.metric-dot {
+  width: 4px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.metric-value {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.metric-divider {
+  width: 1px;
+  height: 32px;
+  background-color: var(--color-border-subtle);
+}
+
+.sdc-chart-wrap {
+  flex: 1;
+  min-height: 180px;
+}
+
+.donut-chart {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  /* Conic gradient to simulate:
+     Indigo (Website): 45% (0 -> 162deg)
+     Teal (Mobile): 30% (162deg -> 270deg)
+     Gray (Other): 25% (270deg -> 360deg) 
+  */
+  background: conic-gradient(
+    var(--color-brand-indigo) 0deg 162deg,
+    white 162deg 166deg, /* tiny gap */
+    var(--color-brand-teal) 166deg 270deg,
+    white 270deg 274deg, /* tiny gap */
+    #E2E8F0 274deg 356deg,
+    white 356deg 360deg
+  );
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Rotate slightly to match design showing starting angle at bottom */
+  transform: rotate(200deg);
+}
+
+.donut-inner {
+  width: 110px;
+  height: 110px;
+  background-color: var(--color-surface-card);
+  border-radius: 50%;
+}

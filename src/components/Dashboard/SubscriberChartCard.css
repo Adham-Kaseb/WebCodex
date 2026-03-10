@@ -1,0 +1,131 @@
+/* src/components/Dashboard/SubscriberChartCard.css */
+
+.subscriber-chart-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.scc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.scc-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-primary);
+}
+
+.scc-icon {
+  color: var(--color-text-secondary);
+}
+
+.scc-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.scc-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-btn);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-card);
+}
+
+.scc-value-area {
+  margin-bottom: 24px;
+}
+
+.scc-main-value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+.scc-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+.scc-trend {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+  padding: 2px 6px;
+  border-radius: var(--radius-pill);
+  font-weight: var(--font-weight-bold);
+}
+
+.scc-subtitle-text {
+  color: var(--color-text-secondary);
+}
+
+.scc-chart-container {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  min-height: 160px;
+}
+
+.scc-bars-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  height: 120px;
+}
+
+.scc-bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 14%;
+  position: relative;
+  gap: 8px;
+}
+
+.scc-bar-track {
+  width: 24px;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.scc-bar-fill {
+  width: 100%;
+  border-radius: 6px;
+  transition: height 0.3s ease;
+}
+
+.scc-bar-label {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.scc-bar-col.active .scc-bar-label {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.scc-bar-tooltip {
+  position: absolute;
+  top: -24px;
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}

@@ -1,0 +1,60 @@
+/* src/pages/Dashboard.css */
+
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-edu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.dash-two-col {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.dash-side-content {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* Typography Enhancements */
+.dash-section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px;
+  font-weight: 850;
+  color: #111827;
+  letter-spacing: -1.5px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dash-section-title::before {
+  content: '';
+  width: 4px;
+  height: 32px;
+  background: var(--color-brand-indigo);
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .dash-two-col {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-edu-content {
+    gap: 32px;
+  }
+}

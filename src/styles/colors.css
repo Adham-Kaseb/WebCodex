@@ -1,0 +1,34 @@
+/* src/styles/colors.css */
+:root {
+  /* Brand Colors */
+  --color-brand-indigo: #5347CE;
+  --color-brand-lavender: #887CFD;
+  --color-brand-blue: #4896FE;
+  --color-brand-teal: #16C8C7;
+
+  /* Surface & Backgrounds */
+  --color-bg-page: #F8FAFC;
+  --color-surface-card: #FFFFFF;
+  --color-border-subtle: #F1F3F5;
+  --color-sidebar-bg: #FFFFFF;
+  
+  /* Text */
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-inverse: #FFFFFF;
+
+  /* Status */
+  --color-success-bg: #E0F8F1;
+  --color-success-text: #10B981;
+  --color-danger-bg: #FEE2E2;
+  --color-danger-text: #EF4444;
+
+  /* Shadows & Geometry */
+  --shadow-card-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-card-md: 0 6px 16px rgba(0,0,0,0.04);
+  --shadow-dropdown: 0 10px 25px rgba(0,0,0,0.1);
+  --radius-card: 16px;
+  --radius-btn: 8px;
+  --radius-pill: 9999px;
+  --radius-input: 10px;
+}

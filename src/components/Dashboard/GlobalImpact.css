@@ -1,0 +1,86 @@
+/* src/components/Dashboard/GlobalImpact.css */
+
+.global-impact-section {
+  margin-top: 64px;
+  padding: 0 16px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card:hover {
+  border-color: var(--color-brand-lavender);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon-bg {
+  width: 44px;
+  height: 44px;
+  background: #F0FDF4; /* light green for growth/impact */
+  color: #16A34A;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.stat-description {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+/* Coloring specific stats */
+.stat-card:nth-child(2) .stat-icon-bg { background: #E0F2FE; color: #0284C7; }
+.stat-card:nth-child(3) .stat-icon-bg { background: #F5F3FF; color: #7C3AED; }
+.stat-card:nth-child(4) .stat-icon-bg { background: #FEF2F2; color: #DC2626; }
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

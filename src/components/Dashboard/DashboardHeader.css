@@ -1,0 +1,49 @@
+/* src/components/Dashboard/DashboardHeader.css */
+
+.dashboard-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.dashboard-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.dashboard-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toolbar-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-btn);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.toolbar-btn:hover {
+  background-color: var(--color-bg-page);
+  border-color: #E2E8F0;
+}
+
+.btn-icon {
+  color: var(--color-text-secondary);
+}
+
+.export-btn {
+  /* Give the export button a very subtle gray background if needed, per design it looks similar but slightly distinct */
+  background-color: #FAFAFA;
+}

@@ -1,0 +1,61 @@
+/* src/components/Dashboard/FastFacts.css */
+
+.fast-facts-section {
+  margin-top: 64px;
+  margin-bottom: 80px;
+  padding: 0 16px;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.fact-item {
+  background: #F8FAFC;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px dashed var(--color-border-subtle);
+  transition: all 0.2s ease;
+}
+
+.fact-item:hover {
+  background: white;
+  border-style: solid;
+  border-color: var(--color-brand-indigo);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.fact-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.fact-icon {
+  color: var(--color-brand-indigo);
+}
+
+.fact-header h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.fact-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .facts-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+    .facts-grid { grid-template-columns: 1fr; }
+}
