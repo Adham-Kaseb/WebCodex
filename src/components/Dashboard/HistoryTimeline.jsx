@@ -13,30 +13,41 @@ const iconMap = {
 
 const HistoryTimeline = ({ milestones }) => {
   return (
-    <div className="history-timeline-section">
-      <h2 className="dash-section-title">The Evolution of the Web</h2>
-      <div className="timeline-container">
-        <div className="timeline-line"></div>
-        <div className="timeline-items">
-          {milestones.map((item, index) => {
-            const IconComponent = iconMap[item.icon];
-            return (
-              <div key={index} className="timeline-item">
-                <div className="milestone-year">{item.year}</div>
-                <div className="milestone-dot">
-                  <div className="dot-inner"></div>
-                </div>
-                <div className="milestone-card">
-                  <div className="milestone-icon">
+    <div className="evolution-journey-section">
+      <h2 className="dash-section-title">
+        <span>THE ARCHIVE</span>
+        Evolution of the Web
+      </h2>
+
+      <div className="journey-track">
+        <div className="time-thread"></div>
+
+        {milestones.map((milestone, index) => {
+          const IconComponent = iconMap[milestone.icon];
+          return (
+            <div
+              key={index}
+              className={`milestone-step ${index % 2 === 0 ? "left" : "right"}`}
+            >
+              <div className="bg-year-parallax">{milestone.year}</div>
+
+              <div className="milestone-dot">
+                <div className="dot-glow"></div>
+              </div>
+
+              <div className="milestone-content-card">
+                <div className="milestone-meta">
+                  <span className="milestone-year">{milestone.year}</span>
+                  <div className="milestone-icon-box">
                     <IconComponent size={20} />
                   </div>
-                  <h4 className="milestone-title">{item.title}</h4>
-                  <p className="milestone-desc">{item.description}</p>
                 </div>
+                <h3>{milestone.title}</h3>
+                <p>{milestone.description}</p>
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

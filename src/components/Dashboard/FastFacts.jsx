@@ -4,13 +4,20 @@ import "./FastFacts.css";
 
 const FastFacts = ({ facts }) => {
   return (
-    <div className="fast-facts-section">
-      <h2 className="dash-section-title">Technical Fast Facts</h2>
-      <div className="facts-grid">
+    <div className="fast-facts-codex">
+      <h2 className="dash-section-title">
+        <span>THE KNOWLEDGE</span>
+        Technical Fast Facts
+      </h2>
+
+      <div className="facts-grid-v2">
         {facts.map((fact, index) => (
-          <div key={index} className="fact-item">
+          <div key={index} className="fact-card-v2">
+            <div className="fact-accent"></div>
             <div className="fact-header">
-              <HelpCircle size={18} className="fact-icon" />
+              <div className="fact-icon-wrapper">
+                <HelpCircle size={18} />
+              </div>
               <h4>{fact.title}</h4>
             </div>
             <p>{fact.content}</p>

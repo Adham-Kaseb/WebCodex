@@ -3,23 +3,38 @@ import "./KeyFigures.css";
 
 const KeyFigures = ({ pioneers }) => {
   return (
-    <div className="key-figures-section">
-      <h2 className="dash-section-title">The Web Pioneers</h2>
-      <div className="pioneer-cards-grid">
+    <div className="pioneer-gallery-section">
+      <h2 className="dash-section-title">
+        <span>THE ARCHITECTS</span>
+        Web Pioneers
+      </h2>
+
+      <div className="pioneer-grid">
         {pioneers.map((person) => (
-          <div key={person.id} className="pioneer-card">
-            <div className="pioneer-info-top">
-              <div className="pioneer-avatar-placeholder">
-                {person.name.charAt(0)}
+          <div key={person.id} className="pioneer-card-v2">
+            <div className="pioneer-visual">
+              <div className="avatar-frame">
+                <div className="avatar-placeholder">
+                  {person.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")}
+                </div>
               </div>
-              <div className="pioneer-meta">
-                <h4 className="pioneer-name">{person.name}</h4>
+              <div className="pioneer-meta-info">
+                <h3>{person.name}</h3>
                 <span className="pioneer-role">{person.role}</span>
               </div>
             </div>
+
             <p className="pioneer-impact">{person.impact}</p>
-            <div className="pioneer-contribution-tag">
-              <span>{person.contribution}</span>
+
+            <div className="contribution-dna">
+              {person.contribution.split(",").map((tag, i) => (
+                <span key={i} className="dna-tag">
+                  {tag.trim()}
+                </span>
+              ))}
             </div>
           </div>
         ))}

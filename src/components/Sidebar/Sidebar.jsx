@@ -17,7 +17,7 @@ import {
   Smartphone,
   Info,
 } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./Sidebar.css";
 
 const SidebarItem = ({ icon: Icon, label, to, badge }) => {
@@ -42,7 +42,7 @@ const SidebarItem = ({ icon: Icon, label, to, badge }) => {
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <div className="sidebar-logo">
+      <Link to="/" className="sidebar-logo">
         <div className="logo-icon flex-center">
           <svg
             width="24"
@@ -62,26 +62,13 @@ const Sidebar = () => {
           </svg>
         </div>
         <span className="logo-text">WebCodex</span>
-        <button className="collapse-btn">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M9 18l6-6-6-6" />
-          </svg>
-        </button>
-      </div>
+      </Link>
 
       <div className="sidebar-content">
+        <SidebarItem icon={Info} label="web.info" to="/app" />
+
         <div className="sidebar-section">
           <div className="section-title">WEB TECHNOLOGIES</div>
-          <SidebarItem icon={Info} label="web.info" to="/app" />
           <SidebarItem icon={Globe} label="HTML5" to="/app/html" />
           <SidebarItem icon={Palette} label="CSS3" to="/app/css3" />
           <SidebarItem icon={Code} label="JavaScript" to="/app/js" />

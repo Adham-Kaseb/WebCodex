@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import HtmlReference from "./pages/HtmlReference";
 import SearchResults from "./pages/SearchResults";
 import LandingPage from "./pages/LandingPage";
+import ComingSoon from "./pages/ComingSoon";
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
         <Route path="/app" element={<DashboardLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="html" element={<HtmlReference />} />
+          <Route path="css3" element={<ComingSoon techId="css3" />} />
+          <Route path="js" element={<ComingSoon techId="js" />} />
+          <Route path="react" element={<ComingSoon techId="react" />} />
+          <Route path="tailwind" element={<ComingSoon techId="tailwind" />} />
           <Route path="search" element={<SearchResults />} />
         </Route>
 

@@ -19,14 +19,9 @@ const Dashboard = () => {
 
       <div className="dashboard-edu-content">
         <GlobalImpact stats={webStats} />
-
-        <div className="dash-two-col">
-          <HistoryTimeline milestones={webMilestones} />
-          <div className="dash-side-content">
-            <KeyFigures pioneers={webPioneers} />
-            <FastFacts facts={webFacts} />
-          </div>
-        </div>
+        <HistoryTimeline milestones={webMilestones} />
+        <KeyFigures pioneers={webPioneers} />
+        <FastFacts facts={webFacts} />
       </div>
     </div>
   );
