@@ -45,19 +45,17 @@ const Sidebar = () => {
       <Link to="/" className="sidebar-logo">
         <div className="logo-icon flex-center">
           <svg
-            width="24"
-            height="24"
+            width="28"
+            height="28"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M14 6L6 14L8.5 16.5L16.5 8.5L14 6Z"
-              fill="var(--color-brand-indigo)"
-            />
+            <path d="M14 6L6 14L8.5 16.5L16.5 8.5L14 6Z" fill="white" />
             <path
               d="M10 18L18 10L15.5 7.5L7.5 15.5L10 18Z"
-              fill="var(--color-brand-lavender)"
+              fill="white"
+              fillOpacity="0.8"
             />
           </svg>
         </div>
