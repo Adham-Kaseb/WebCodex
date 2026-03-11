@@ -1,0 +1,390 @@
+.lesson-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem 1rem; /* Added horizontal padding */
+}
+
+@media (min-width: 640px) {
+  .lesson-wrapper {
+    padding: 0 0 4rem 0;
+  }
+}
+.lesson-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: #64748b;
+  border: none;
+  font-size: 0.95rem;
+  font-family: "Outfit", sans-serif;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.lesson-back-btn:hover {
+  color: #0f172a;
+}
+
+.lesson-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.lesson-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+}
+
+.lesson-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.lesson-subtitle {
+  color: #64748b;
+  margin: 0.25rem 0 0 0;
+  font-size: 1.1rem;
+}
+
+.glassmorphism-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  overflow: hidden; /* Added to constrain content */
+}
+
+@media (max-width: 640px) {
+  .glassmorphism-panel {
+    padding: 1.5rem;
+  }
+  .lesson-header {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.lesson-section {
+  margin-bottom: 3rem;
+}
+
+.lesson-section:last-child {
+  margin-bottom: 0;
+}
+
+.lesson-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-family: "Outfit", sans-serif;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+}
+
+.lesson-section h2 svg {
+  color: #10b981;
+}
+
+.lesson-text {
+  color: #334155;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.lesson-text p {
+  margin-bottom: 1rem;
+}
+
+.lesson-text strong {
+  color: #0f172a;
+}
+
+.lesson-text ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.lesson-text li {
+  margin-bottom: 0.5rem;
+}
+
+.lesson-text code {
+  background: #f1f5f9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.9em;
+  color: #0ea5e9;
+  border: 1px solid #e2e8f0;
+}
+
+.examples-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .examples-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.example-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.example-card.real-world {
+  background: linear-gradient(to bottom right, #ffffff, #f0fdf4);
+  border-color: #bbf7d0;
+}
+
+.example-badge {
+  position: absolute;
+  top: -12px;
+  left: 1.5rem;
+  background: #1e293b;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.example-card.real-world .example-badge {
+  background: #10b981;
+}
+
+.example-code {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1.25rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+  white-space: pre-wrap;     /* Ensures code wraps on small screens */
+  word-break: break-all;     /* Prevents horizontal overflow */
+  word-wrap: break-word;
+}
+
+.example-note {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 0;
+}
+
+.editor-instructions {
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.editor-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  min-height: 350px;
+}
+
+@media (min-width: 768px) {
+  .editor-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.code-editor, .code-preview {
+  border-radius: 16px;
+  border: 1px solid #cbd5e1;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  box-sizing: border-box;
+}
+
+.code-editor {
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 1.5rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.code-editor:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4), 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.code-preview {
+  background: white;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.preview-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+}
+
+.lesson-footer-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.lesson-nav-spacer {
+  flex: 1; /* Pushes the single button to the correct side if only one exists */
+}
+
+.lesson-nav-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #ffffff, #f0f9ff);
+  border: 1px solid #bae6fd;
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.1);
+  gap: 1.5rem;
+}
+
+.lesson-nav-btn.prev-btn {
+  background: linear-gradient(to left, #ffffff, #f1f5f9);
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 15px -3px rgba(148, 163, 184, 0.1);
+}
+
+.lesson-nav-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(14, 165, 233, 0.2);
+  border-color: #7dd3fc;
+}
+
+.lesson-nav-btn.prev-btn:hover {
+  box-shadow: 0 20px 25px -5px rgba(148, 163, 184, 0.2);
+  border-color: #94a3b8;
+}
+
+.lesson-nav-btn.next-btn:hover .next-icon {
+  transform: translateX(8px);
+  background: #0284c7;
+}
+
+.lesson-nav-btn.prev-btn:hover .prev-icon {
+  transform: translateX(-8px);
+  background: #475569;
+}
+
+.nav-meta {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.nav-meta.align-right {
+  text-align: right;
+}
+
+.nav-meta.align-left {
+  text-align: left;
+}
+
+.nav-label {
+  font-size: 0.85rem;
+  color: #0284c7;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.prev-btn .nav-label {
+  color: #475569;
+}
+
+.nav-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  font-family: "Outfit", sans-serif;
+  line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  .nav-title {
+    font-size: 1.5rem;
+  }
+}
+
+.nav-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background: #0ea5e9;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.nav-icon.prev-icon {
+  background: #64748b;
+}
+
+@media (max-width: 768px) {
+  .lesson-footer-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .lesson-nav-btn {
+    width: 100%;
+    padding: 1.25rem;
+  }
+}

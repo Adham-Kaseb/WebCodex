@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import "./TopicCard.css";
 
 const TopicCard = ({ topic, showTooltip = true }) => {
+  // Use the topic id to navigate to the dynamic lesson page route
   return (
-    <Link to={topic.path} className="topic-card">
+    <Link to={`/app/html/${topic.id}`} className="topic-card">
       <div className="tc-icon-wrap">
         <BookOpen size={20} className="tc-icon" />
       </div>
